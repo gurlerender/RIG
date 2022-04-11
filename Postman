@@ -1,1 +1,255 @@
-
+{
+	"info": {
+		"_postman_id": "0442bfa3-936a-4b35-b478-ac7965314c9d",
+		"name": "rigCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/books/saveBook",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"T1Book\",\r\n  \"author\": \"T1Aut\",\r\n  \"price\": 20,\r\n  \"currency\" : \"TL\",\r\n  \"stock\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/books/saveBook",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books",
+						"saveBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/customers/saveCustomer",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Test\",\r\n  \"surname\": \"Tester\",\r\n  \"password\": \"123456\",\r\n  \"email\": \"test6@gmail.com\",\r\n  \"phone\": \"501111111\",\r\n  \"address\": \"Kartal/İstanbul\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/customers/saveCustomer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customers",
+						"saveCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/books/updateBookStock",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\"   : \"Test\",\r\n  \"title\": \"T1Book\",\r\n  \"author\": \"T1Aut\",\r\n  \"price\": 20,\r\n  \"currency\" : \"TL\",\r\n  \"stock\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/books/updateBookStock",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"books",
+						"updateBookStock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/orders/saveOrder",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerId\": \"6252c816ee67270d3c75a8be\",\r\n  \"orderDetail\": \r\n  [\r\n    {\"bookId\": \"6252cf421caa85765e5132c6\", \"orderCount\":2},\r\n    {\"bookId\": \"6252cf5d1caa85765e5132c7\", \"orderCount\":3}\r\n   ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/orders/saveOrder",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders",
+						"saveOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/orders/getOrder?id=62535425280f1f2dd096dd34",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerId\": \"6252c816ee67270d3c75a8be\",\r\n  \"orderDetail\": \r\n  [\r\n    {\"bookId\": \"6252cf421caa85765e5132c6\", \"orderCount\":2},\r\n    {\"bookId\": \"6252cf5d1caa85765e5132c7\", \"orderCount\":3}\r\n   ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/orders/getOrder?id=62535425280f1f2dd096dd34",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders",
+						"getOrder"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "62535425280f1f2dd096dd34"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/orders/getOrderList?startDate=10.04.2022&endDate=12.04.2022",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerId\": \"6252c816ee67270d3c75a8be\",\r\n  \"orderDetail\": \r\n  [\r\n    {\"bookId\": \"6252cf421caa85765e5132c6\", \"orderCount\":2},\r\n    {\"bookId\": \"6252cf5d1caa85765e5132c7\", \"orderCount\":3}\r\n   ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/orders/getOrderList?startDate=10.04.2022&endDate=12.04.2022",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders",
+						"getOrderList"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "10.04.2022"
+						},
+						{
+							"key": "endDate",
+							"value": "12.04.2022"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
