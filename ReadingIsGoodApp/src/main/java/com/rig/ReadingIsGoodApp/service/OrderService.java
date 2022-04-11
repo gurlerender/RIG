@@ -90,7 +90,7 @@ public class OrderService {
 			if(orderList == null) {
 				return new ServiceResponse<List<Order>>(false, Constants.ORDER_NOT_FOUND,null);
 			}
-			return new ServiceResponse<List<Order>>(true, Constants.ORDER_NOT_FOUND, orderList);
+			return new ServiceResponse<List<Order>>(true, "", orderList);
 			
 		} catch (ParseException e) {
 			return new ServiceResponse<List<Order>>(false, Constants.DATE_PARSE_EXCEPTION,null);
